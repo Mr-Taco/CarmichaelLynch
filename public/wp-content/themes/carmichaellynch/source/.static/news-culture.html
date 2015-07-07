@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carmichael Lynch - Static Front End</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="category-roofstage-pass">
+      <div class="container-fluid">
+        <div class="row">
+          <div style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/gray-bg2.jpg')" class="col-xs-12 detail-header">
+            <div class="headlines">
+              <h1>ROOFSTAGE PASS</h1>
+              <p>FRANKIE LEE</p>
+            </div>
+            <div class="publish-details"><span class="author"></span><span class="published"> Published on</span><span class="date">November 10, 2014</span></div>
+          </div>
+        </div>
+        <article>
+          <div class="row">
+            <div class="content col-xs-12 col-sm-6">
+              <p>Twin Cities alt country musician Frankie Lee has played with numerous artists. Now he’s stepping into the limelight with his debut EP Middle West. His honest lyrics and cowboy-coolness left us wanting to pack up and head for the country.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="gallery-container swiper-container type-portrait">
+                <div class="gallery swiper-wrapper">
+                  <div class="gallery-item category-news swiper-slide">
+                    <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')" class="image"></div>
+                  </div>
+                  <div class="gallery-item category-work swiper-slide">
+                    <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')" class="image"></div>
+                  </div>
+                  <div class="gallery-item category-news swiper-slide">
+                    <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')" class="image"></div>
+                  </div>
+                  <div class="gallery-item category-work swiper-slide">
+                    <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')" class="image"></div>
+                  </div>
+                </div>
+                <div class="gallery-info-strap"><span class="info">Hungry Moments<span class="time">(00:30)</span></span></div>
+                <div class="gallery-view-all"></div>
+                <div class="gallery-pagination"></div>
+                <div class="gallery-prev-next">
+                  <div id="next" class="direction">
+                    <div class="fa fa-angle-right"></div>
+                    <div class="blurb"><span></span></div>
+                  </div>
+                  <div id="prev" class="direction">
+                    <div class="fa fa-angle-left"></div>
+                    <div class="blurb"><span></span></div>
+                  </div>
+                </div>
+                <div class="gallery-view-all-panel">
+                  <div class="close header-button"></div>
+                  <div class="row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <script src="vendor.js"></script>
+    <script src="app.js"></script>
+    <script>
+      $(document).ready(function () {
+          var gallery = new cl.Gallery(".gallery-container", {
+              peak: false
+              , directions: true
+              , autoplay: 7000
+              , strap: false
+              , info: false
+              , viewAll: false
+          });
+      });
+    </script>
+  </body>
+</html>

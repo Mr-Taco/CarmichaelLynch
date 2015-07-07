@@ -1,0 +1,75 @@
+extends _layout
+
+block content
+    .category-work
+        .container-fluid
+            .row
+                .col-xs-12.detail-header(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/gray-bg3.jpg')")
+                    .headlines
+                        h1 SUBARU
+                        p MEET THE BARKLEYS
+
+                    .publish-details
+                        span.author
+                        span.published  Published on
+                        span.date January 16, 2014
+
+
+            article
+                .row
+                    .content.col-xs-12.col-sm-12
+                        p Dogs have been driving Subaru vehicles for years. This year, we introduce you to a family of dogs, the Barkleys, that go through everyday relatable human experiences. They are moments we can all identify with. The new commercials focus on situations we've gone through with our own families: teenagers dating, road trips, getting stuck in traffic, getting lost in thought. When you meet the Barkleys you can sit back and laugh at all of the silly and simple human behaviors, because the dogs are standing in for us.
+
+                        p You can see more of the Barkleys by visiting <a href="http://www.subaru.com/dogs">www.subaru.com/dogs</a>
+
+                    .col-xs-12.col-sm-12
+                        .gallery-container.swiper-container.type-landscape
+                            .gallery.swiper-wrapper
+                                .gallery-item.category-news.swiper-slide
+                                    .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')")
+
+                                .gallery-item.category-work.swiper-slide
+                                    .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')")
+
+                                .gallery-item.category-news.swiper-slide
+                                    .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')")
+
+                                .gallery-item.category-work.swiper-slide
+                                    .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')")
+
+
+                            .gallery-info-strap
+                                span.info Hungry Moments
+                                    span.time (00:30)
+
+                            .gallery-view-all
+
+                            .gallery-pagination
+                            .gallery-prev-next
+                                #next.direction
+                                    .fa.fa-angle-right
+                                    .blurb
+                                        span
+                                #prev.direction
+                                    .fa.fa-angle-left
+                                    .blurb
+                                        span
+
+                            .gallery-view-all-panel
+                                .close.header-button
+                                .row
+
+
+
+block scripts
+    script.
+        $(document).ready(function () {
+            var gallery = new cl.Gallery(".gallery-container", {
+                peak: false
+                , directions: true
+                , autoplay: 7000
+                , strap: false
+                , info: false
+                , viewAll: false
+            });
+        });

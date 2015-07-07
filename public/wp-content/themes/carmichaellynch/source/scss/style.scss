@@ -1,0 +1,62 @@
+/*
+ Theme Name:   Carmichael Lynch
+ Theme URI:    http://www.carmichaellynch.com
+ Description:  Carmichael Lynch
+ Author:       Wildlife
+ Author URI:   http://www.wildlife.la
+ Version:      1.0.0
+ Text Domain:  carmichaellynch
+*/
+
+
+//reset
+@import "reset";
+
+//variables and overrides
+@import "variables";
+
+//bootstrap
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins","../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables","../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
+
+//compass
+@import "compass";
+
+
+//mixins
+@import "components/mixins";
+
+
+
+//swiper
+@import "../bower_components/swiper/dist/idangerous";
+
+//video
+//@import "../bower_components/video.js/dist/video-js/video-js";
+//Helpers
+@import "components/helpers";
+
+
+//fonts
+@import "fonts";
+
+//global styles
+@import "global";
+
+//components
+@import "components/footer", "components/galleries", "components/header", "components/tiles", "components/pagination", "components/linksList", "components/buttons";
+@import "components/digital_screen", "components/loading";
+
+//pages
+//@import "home_landing";
+@import "work_landing";
+@import "work_detail";
+@import "news_categories";
+
+@import "about";
+@import "about_bio";
+@import "careers";
+@import "culture";
+
+//Detail Pages
+@import "detail";
+

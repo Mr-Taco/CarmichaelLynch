@@ -1,0 +1,28 @@
+extends _layout
+include _mixins
+
+block content
+    #about
+        #pagination.container-fluid
+            .row
+                #prev-page.col-xs-5
+                    i.fa.fa-angle-left.col-xs-12.col-sm-2.col-md-1
+                    .blurb.col-sm-10.col-md-6
+                        .center
+                            h1 Ad Age
+                            h2 Avoid Total Mayhem: 5 Ways to Build Solid Client Relationships
+                    .image-container.col-md-5
+                        .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-1.jpg')")
+
+                #view-all-pages.col-xs-2
+                    +viewAllBtn()
+
+                #next-page.col-xs-5.col-sm-5
+                    .image-container.col-md-5
+                        .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-2.jpg')")
+                    .blurb.col-sm-10.col-md-6
+                        .center
+                            h1 World of Business new
+                            h2 A Review and Prediction: Be Bold, Now
+                    i.fa.fa-angle-right.col-xs-12.col-sm-2.col-md-1
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carmichael Lynch - Static Front End</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="work">
+      <!-- when assigning top,left,right,bottom,center registration. center is always overridden.-->
+      <!-- these need an id, making one up for test purposes-->
+      <div id="tempur-pedic" class="accordion-item category-work">
+        <div style="background-image:url('images/temp/tempur-pedic.jpg')" class="accordion-content-image img-top img-center"></div>
+        <div class="table">
+          <div class="broken table-center">
+            <h1>Tempur-pedic</h1>
+            <p>you are how you sleep</p>
+            <div class="button category-work"><span>View Project</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- when assigning top,left,right,bottom,center registration. center is always overridden.-->
+      <!-- these need an id, making one up for test purposes-->
+      <div id="doubleurxxx" class="accordion-item category-work">
+        <div style="background-image:url('images/temp/doubleurxxx.jpg')" class="accordion-content-image img-center"></div>
+        <div class="table">
+          <div class="broken table-center">
+            <h1>Doubleurxxx productions</h1>
+            <p>The ride of her life</p>
+            <div class="button category-work"><span>View Project</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- when assigning top,left,right,bottom,center registration. center is always overridden.-->
+      <!-- these need an id, making one up for test purposes-->
+      <div id="jack-links-1" class="accordion-item category-work">
+        <div style="background-image:url('images/temp/jackslinks.jpg')" class="accordion-content-image img-center img-bottom"></div>
+        <div class="table">
+          <div class="broken table-center">
+            <h1>Jack Links</h1>
+            <p>hungry moments</p>
+            <div class="button category-work"><span>View Project</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- when assigning top,left,right,bottom,center registration. center is always overridden.-->
+      <!-- these need an id, making one up for test purposes-->
+      <div id="trane" class="accordion-item category-work">
+        <div style="background-image:url('images/temp/trane.jpg')" class="accordion-content-image"></div>
+        <div class="table">
+          <div class="broken table-center">
+            <h1>Trane</h1>
+            <p>unstoppable</p>
+            <div class="button category-work"><span>View Project</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- when assigning top,left,right,bottom,center registration. center is always overridden.-->
+      <!-- these need an id, making one up for test purposes-->
+      <div id="jack-links-2" class="accordion-item category-work">
+        <div style="background-image:url('images/temp/jacklinks2.jpg')" class="accordion-content-image"></div>
+        <div class="table">
+          <div class="broken table-center">
+            <h1>Jack Links</h1>
+            <p>messin' with sasquatch</p>
+            <div class="button category-work"><span>View Project</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- when assigning top,left,right,bottom,center registration. center is always overridden.-->
+      <!-- these need an id, making one up for test purposes-->
+      <div id="steak-shake" class="accordion-item category-work">
+        <div style="background-image:url('images/temp/steakshake.jpg')" class="accordion-content-image img-center"></div>
+        <div class="table">
+          <div class="broken table-center">
+            <h1>steak n' shake</h1>
+            <p>hunger wisely</p>
+            <div class="button category-work"><span>View Project</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- when assigning top,left,right,bottom,center registration. center is always overridden.-->
+      <!-- these need an id, making one up for test purposes-->
+      <div id="subaru-1" class="accordion-item category-work">
+        <div style="background-image:url('images/temp/subaru.jpg')" class="accordion-content-image"></div>
+        <div class="table">
+          <div class="broken table-center">
+            <h1>subaru</h1>
+            <p>Love. It's what makes a subaru, a subaru.</p>
+            <div class="button category-work"><span>View Project</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- when assigning top,left,right,bottom,center registration. center is always overridden.-->
+      <!-- these need an id, making one up for test purposes-->
+      <div id="gnc" class="accordion-item category-work">
+        <div style="background-image:url('../images/temp/gnc.jpg')" class="accordion-content-image img-top img-right"></div>
+        <div class="table">
+          <div class="broken table-center">
+            <h1>gnc</h1>
+            <p>beat average</p>
+            <div class="button category-work"><span>View Project</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- when assigning top,left,right,bottom,center registration. center is always overridden.-->
+      <!-- these need an id, making one up for test purposes-->
+      <div id="subaru-2" class="accordion-item category-work">
+        <div style="background-image:url('images/temp/subarudog.jpg')" class="accordion-content-image img-center"></div>
+        <div class="table">
+          <div class="broken table-center">
+            <h1>subaru</h1>
+            <p>dog tested. dog approved.</p>
+            <div class="button category-work"><span>View Project</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="vendor.js"></script>
+    <script src="app.js"></script>
+    <script>
+      $(document).ready(function () {
+          var accordion = new cl.Accordion("#work" , {
+              expandHeight:400,
+              compressedHeight:375,
+              enableWidth:768
+          });
+      
+      });
+    </script>
+  </body>
+</html>

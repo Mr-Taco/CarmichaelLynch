@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carmichael Lynch - Static Front End</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="category-work">
+      <div class="container-fluid">
+        <div class="row">
+          <div style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/gray-bg3.jpg')" class="col-xs-12 detail-header">
+            <div class="headlines">
+              <h1>SUBARU</h1>
+              <p>MEET THE BARKLEYS</p>
+            </div>
+            <div class="publish-details"><span class="author"></span><span class="published"> Published on</span><span class="date">January 16, 2014</span></div>
+          </div>
+        </div>
+        <article>
+          <div class="row">
+            <div class="content col-xs-12 col-sm-12">
+              <p>Dogs have been driving Subaru vehicles for years. This year, we introduce you to a family of dogs, the Barkleys, that go through everyday relatable human experiences. They are moments we can all identify with. The new commercials focus on situations we've gone through with our own families: teenagers dating, road trips, getting stuck in traffic, getting lost in thought. When you meet the Barkleys you can sit back and laugh at all of the silly and simple human behaviors, because the dogs are standing in for us.</p>
+              <p>You can see more of the Barkleys by visiting <a href="http://www.subaru.com/dogs">www.subaru.com/dogs</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+              <div class="gallery-container swiper-container type-landscape">
+                <div class="gallery swiper-wrapper">
+                  <div class="gallery-item category-news swiper-slide">
+                    <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')" class="image"></div>
+                  </div>
+                  <div class="gallery-item category-work swiper-slide">
+                    <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')" class="image"></div>
+                  </div>
+                  <div class="gallery-item category-news swiper-slide">
+                    <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')" class="image"></div>
+                  </div>
+                  <div class="gallery-item category-work swiper-slide">
+                    <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')" class="image"></div>
+                  </div>
+                </div>
+                <div class="gallery-info-strap"><span class="info">Hungry Moments<span class="time">(00:30)</span></span></div>
+                <div class="gallery-view-all"></div>
+                <div class="gallery-pagination"></div>
+                <div class="gallery-prev-next">
+                  <div id="next" class="direction">
+                    <div class="fa fa-angle-right"></div>
+                    <div class="blurb"><span></span></div>
+                  </div>
+                  <div id="prev" class="direction">
+                    <div class="fa fa-angle-left"></div>
+                    <div class="blurb"><span></span></div>
+                  </div>
+                </div>
+                <div class="gallery-view-all-panel">
+                  <div class="close header-button"></div>
+                  <div class="row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <script src="vendor.js"></script>
+    <script src="app.js"></script>
+    <script>
+      $(document).ready(function () {
+          var gallery = new cl.Gallery(".gallery-container", {
+              peak: false
+              , directions: true
+              , autoplay: 7000
+              , strap: false
+              , info: false
+              , viewAll: false
+          });
+      });
+    </script>
+  </body>
+</html>

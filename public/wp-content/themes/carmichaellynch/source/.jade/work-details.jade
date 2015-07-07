@@ -1,0 +1,160 @@
+extends _layout
+include _mixins
+
+
+block content
+    #work.work
+        .container-fluid
+
+            #marquee.detail-panel-container.marquee
+                .row.detail-panel-height-lg
+                    .col-xs-12
+                        .image-tile(style='background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/rohl-marquee-lrg.jpg") center center no-repeat;')
+
+                    .col-xs-12.text-overlap
+                        .text-tile.marquee
+                            h1.marquee Doubleurxxx Productions
+                            h2.marquee The ride of her life
+                            span.divider
+                            p Subaru asked us for an add campaign to introduce their new WRX. A street rocket revered by guns who don't much like car ads, car companies, lawyers, logos or anything else that goes into an ad campaign. So we gave them their own grindhouse production company instead.
+
+
+
+            .detail-panel-container
+                    .row.detail-panel-height-md
+                        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                            .gallery-tile
+                                +gallery()
+
+
+
+
+            // ============  FOUR TILE GRIDS ============
+
+            // === GRID 1 ===
+            // Here, the image tile is on the left, and the text tile on the right
+            .detail-panel-container
+                // PZ - used namespaced height class here
+                .row.detail-panel-height-sm
+                    .col-xs-12.col-sm-6
+                        +imageWidget('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/media-integration-bg.jpg' ,'','')
+                    .col-xs-12.col-sm-6
+                        .text-tile.centered.table
+                            .table-center
+                                h1.pad-bottom.white Funny Or Die Media Integration
+                                p Bucky Lasek, famous rally driver and star of the first DoubleURXXX film, is not an actor. Really not an actor. We arranged acting lessons from megastar David Hasselhoff. Then we made it a hit on Funny Or Die.
+
+
+
+            // Here, the text tile is on the left, and the image tile on the right
+            .detail-panel-container
+                .row.detail-panel-height-sm
+                    .col-xs-12.col-sm-6.col-sm-push-6
+                        .image-tile(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/funny-or-die-img.jpg') center center no-repeat;")
+                    .col-xs-12.col-sm-6.col-sm-pull-6
+                        .text-tile.centered.table
+                            .table-center
+                                h1.pad-bottom.white Fxx Media Integration
+                                p To give The Ride of Her Life real-world box office cred, we turned to FXX to capture the insanely ecstatic comments of moviegoers leaving theaters. The fact that the film didn’t exist was a minor challenge.
+
+
+
+            +digitalScreen('ipad',true)
+
+
+
+
+            .detail-panel-container
+                .row.detail-panel-height-lg
+                    .col-xs-12
+                        .image-tile(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/phrases-poster.jpg') center center no-repeat;")
+
+
+
+
+
+            // ============  THREE TILE GRIDS ============
+            // ==== GRID 1 ===
+
+            // Three tile grid with large image tile on left and with text tile (top) and small image tile (bottom) on right
+            .detail-panel-container
+                .row.detail-panel-height-lg
+                    .col-xs-12.col-sm-6
+                            .image-tile(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/three-square-lrg.jpg') center center no-repeat;")
+
+                    .col-xs-12.col-sm-6
+                        //PZ having the generic namespaced class allowed me to set the same heights on these 2 cols so they just naturally flow
+                        .col-xs-12.detail-panel-col-height-xs-6
+                            .text-tile.centered.table
+                                .table-center
+                                    h1.pad-bottom.white A Digital Trail of Dust
+                                    p Like a missile that never stops seeking heat, we chased our drivers across the digital space. Aptly titled pre-roll: Girl Hair, Hot Girl Specs, Acting Lessons. A take-over of movie-themed sites such as Rotten Tomatoes and YouTube on the day after the Oscars.
+
+                        .col-xs-12.detail-panel-col-height-xs-6
+                            .gallery-tile
+                                +gallery()
+
+            // Three tile grid with large image tile on right and with text tile (top) and small image tile (bottom) on left
+            .detail-panel-container
+                .row.detail-panel-height-lg
+                    .col-xs-12.col-sm-6.col-sm-push-6
+                        .image-tile(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/three-square-lrg.jpg') center center no-repeat;")
+
+                    .col-xs-12.col-sm-6.col-sm-pull-6
+                        .col-xs-12.detail-panel-col-height-xs-6
+                            .text-tile.centered.table
+                                .table-center
+                                    h1.pad-bottom.white A Digital Trail of Dust
+                                    p Like a missile that never stops seeking heat, we chased our drivers across the digital space. Aptly titled pre-roll: Girl Hair, Hot Girl Specs, Acting Lessons. A take-over of movie-themed sites such as Rotten Tomatoes and YouTube on the day after the Oscars.
+
+                        .col-xs-12.detail-panel-col-height-xs-6
+                            .gallery-tile
+                                +gallery()
+
+
+
+            // Two tile grid with large image tile on left and large text tile on right
+            .detail-panel-container
+                .row.detail-panel-height-lg
+                    .col-xs-12.col-sm-6
+                        .image-tile(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/media-integration-bg.jpg') center center no-repeat;")
+
+                    .col-xs-12.col-sm-6
+                        .text-tile.centered.table
+                            .table-center
+                                h1.pad-bottom.white Media Integrations
+                                p Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat.Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. <br><br>  Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+
+
+            // ==== GRID 2 ===
+            // Two tile grid with large text tile on left and large image tile on right
+            .detail-panel-container
+                .row.detail-panel-height-lg
+                    .col-xs-12.col-sm-6.col-sm-push-6
+                        .image-tile(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/media-integration-bg.jpg') center center no-repeat;")
+                    .col-xs-12.col-sm-6.col-sm-pull-6
+                        .text-tile.table.centered
+                            .table-center
+                                h1.pad-bottom.white Media Integrations
+                                p Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat.Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. <br><br>  Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+
+
+
+
+            .detail-panel-container
+                .row.detail-panel-height-lg.pos-rel
+                    .col-xs-12
+                        .image-tile.small(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/stats-lrg.jpg');")
+
+                    .col-xs-12.text-overlap
+                        .text-tile.stats
+                            ul
+                                li 300 Million Earned Impressions
+                                li 400% Sales Increase
+                                li 19 Terrified Subaru Lawyers
+                            span.divider.colored
+                            p As they say in Hollywood, The Ride of Her Life blew the box office away.
+
+
+
+

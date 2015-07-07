@@ -1,0 +1,132 @@
+[data-accordion] {
+    visibility:hidden;
+    overflow:hidden;
+}
+
+
+#work {
+
+}
+
+.accordion-item {
+    position:relative;
+    height:248px;
+    z-index:100;
+
+    @media(max-width: $screen-xs) {
+        @include transform(translateZ(1000px));
+    }
+
+    .accordion-content-image {
+        background-size:cover;
+        background-repeat:no-repeat;
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        @include transform-origin("50% 50%");
+        @include imageRegistration();
+
+
+        &:after {
+            content:"";
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background:rgba(0,0,0,.25);
+
+        }
+    }
+
+    h1, p {
+        font-family:league_gothicregular;
+        text-transform: uppercase;
+    }
+    > .table {
+        position:relative;
+    }
+    .broken {
+        padding:0 25px;
+        //width:75%;
+        h1, p {
+
+            line-height:32px !important;
+            font-size:36px !important;
+
+        }
+    }
+
+
+
+    .button {
+        position:relative;
+        margin-top: 35px;
+        display: none;
+    }
+
+
+
+
+
+}
+
+@media(min-width:$screen-sm) {
+
+
+    .accordion-item {
+        height:375px;
+        cursor:pointer;
+
+        .broken {
+
+            padding:0 0 0 80px;
+            //width:75%;
+            h1, p {
+                line-height:64px !important;
+                font-size:72px !important;
+                width:auto;
+
+            }
+
+
+        }
+
+        .accordion-content-image {
+            @include transition(-webkit-filter .3s);
+
+            &:after {
+                @include transition(background .5s);
+                background:rgba(0,0,0,.6);
+
+            }
+
+            &.fogOut {
+
+                &:after {
+                    background:rgba(0,0,0,0);
+
+                }
+            }
+
+            &.blur {
+                -webkit-filter:blur(3px);
+            }
+        }
+
+        a.button {
+            display: inherit;
+            top: 35px;
+            @include transform(translateZ(5px));
+        }
+
+    }
+
+    .mobile , .tablet {
+        .accordion-item .accordion-content-image.blur {
+            -webkit-filter:none;
+        }
+    }
+}

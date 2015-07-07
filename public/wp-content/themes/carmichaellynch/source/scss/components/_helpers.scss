@@ -1,0 +1,185 @@
+
+.black-bg-xs {
+    background: black;
+}
+
+
+
+
+.vertical-center-xs {
+    position:relative;
+    top:50%!important;
+    @include transform(translateY(-50%));
+}
+
+.horizontal-center-xs {
+    position:relative;
+    left:50%!important;
+    @include transform(translateX(-50%));
+}
+
+.center-xs {
+    position:relative;
+    top:50%!important;
+    left:50%!important;
+    @include transform(translateX(-50%) translateY(-50%));
+}
+
+
+
+.text-center-xs {
+    text-align:center;
+}
+.text-left-xs {
+    text-align:left;
+}
+.text-right-xs {
+    text-align:right;
+}
+
+.override-grid-padding {
+    @include overrideGridPadding('xs', 30, 30);
+}
+
+.fill-height-xs {
+    height:100%!important;
+}
+
+@media (min-width:$screen-sm) {
+
+    .fill-height-sm {
+        height:100%!important;
+    }
+
+    .black-bg-sm {
+        background: black;
+    }
+
+    .transparent-bg-sm {
+        background: transparent;
+    }
+
+    .vertical-center-sm {
+        position:relative;
+        top:50%!important;
+        @include transform(translateY(-50%));
+    }
+
+    .horizontal-center-sm {
+        position:relative;
+        left:50%!important;
+        @include transform(translateX(-50%));
+    }
+
+    .center-sm {
+        position:relative;
+        top:50%!important;
+        left:50%!important;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+
+
+    .text-center-sm {
+        text-align:center;
+    }
+
+    .text-left-sm {
+        text-align:left;
+    }
+
+    .text-right-sm {
+        text-align:right;
+    }
+
+    .override-grid-padding {
+        @include overrideGridPadding('sm', 80, 40);
+    }
+
+}
+@media (min-width:$screen-md) {
+
+    .fill-height-md {
+        height:100%!important;
+    }
+
+    .vertical-center-md {
+        position:relative;
+        top:50%!important;
+        @include transform(translateY(-50%));
+    }
+
+    .horizontal-center-md {
+        position:relative;
+        left:50%!important;
+        @include transform(translateX(-50%));
+    }
+
+    .center-md{
+        position:relative;
+        top:50%!important;
+        left:50%!important;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+
+
+    .text-center-md {
+        text-align:center;
+    }
+
+    .text-left-md {
+        text-align:left;
+    }
+
+    .text-right-md {
+        text-align:right;
+    }
+
+    .override-grid-padding {
+        @include overrideGridPadding('md', 80, 80);
+    }
+
+}
+
+@media (min-width:$screen-lg) {
+
+    .fill-height-lg {
+        height:100%!important;
+    }
+
+    .vertical-center-lg {
+        position:relative;
+        top:50%!important;
+        @include transform(translateY(-50%));
+    }
+
+    .horizontal-center-lg {
+        position:relative;
+        left:50%!important;
+        @include transform(translateX(-50%));
+    }
+
+    .center-lg {
+        position:relative;
+        top:50%!important;
+        left:50%!important;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+
+
+    .text-center-lg {
+        text-align:center;
+    }
+
+    .text-left-lg {
+        text-align:left;
+    }
+
+    .text-right-lg {
+        text-align:right;
+    }
+
+    .override-grid-padding {
+        @include overrideGridPadding('lg', 80, 80);
+    }
+
+}

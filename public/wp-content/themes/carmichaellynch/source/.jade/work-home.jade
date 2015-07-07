@@ -1,0 +1,30 @@
+extends _layout
+
+include _mixins
+
+
+block content
+    #work
+        +item(["Tempur-pedic", "you are how you sleep", "images/temp/tempur-pedic.jpg" , "tempur-pedic"] )(class="img-top img-center")
+        +item(["Doubleurxxx productions", "The ride of her life", "images/temp/doubleurxxx.jpg", "doubleurxxx"] )(class="img-center")
+        +item(["Jack Links", "hungry moments", "images/temp/jackslinks.jpg", "jack-links-1"] )(class="img-center img-bottom")
+        +item(["Trane", "unstoppable", "images/temp/trane.jpg", "trane"] )
+        +item(["Jack Links", "messin' with sasquatch", "images/temp/jacklinks2.jpg", "jack-links-2"] )
+        +item(["steak n' shake", "hunger wisely", "images/temp/steakshake.jpg", "steak-shake"] )(class="img-center")
+        +item(["subaru", "Love. It's what makes a subaru, a subaru.", "images/temp/subaru.jpg", "subaru-1"] )
+        +item(["gnc", "beat average", "../images/temp/gnc.jpg", "gnc"] )(class="img-top img-right")
+        +item(["subaru", "dog tested. dog approved.", "images/temp/subarudog.jpg", "subaru-2"] )(class="img-center")
+
+
+
+block scripts
+    script.
+        $(document).ready(function () {
+            var accordion = new cl.Accordion("#work" , {
+                expandHeight:400,
+                compressedHeight:375,
+                enableWidth:768
+            });
+
+        });
+

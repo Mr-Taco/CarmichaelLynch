@@ -1,0 +1,83 @@
+extends _layout
+
+block styles
+    style.
+        .row {
+            max-width: 1280px;
+            margin: 20px auto;
+        }
+
+block content
+    .container-fluid
+        .row
+            .tile.post.thought-leadership.category-about.col-xs-12.col-sm-4.col-md-3
+                .tile-inner
+                    .picture(style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')")
+                    .caption
+                        .center
+                            h1 ad age
+                            p LEARNINGS FROM BOOM IN ONLINE CLASSES
+                    .author
+                        span by Marcus Fischer
+            .tile.post.category-news.col-xs-12.col-sm-4.col-md-3
+                .tile-inner
+                    .picture(style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')")
+                    .caption
+                        .center
+                            h1 NEWS
+                            p Carmichael Lynch partners with Jack Link’s on Big Ten Network Spots
+            .tile.post.category-culture.col-xs-12.col-sm-4.col-md-3
+                .tile-inner
+                    .picture(style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')")
+                    .caption
+                        .center
+                            h1 ROOFSTAGE PASS
+                            p FRANKIE LEE
+            .tile.post.category-work.col-xs-12.col-sm-4.col-md-3
+                .tile-inner
+                    .picture(style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')")
+                    .caption
+                        .center
+                            h1 subaru
+                            p A LIFE OF SAFETY
+            .tile.post.category-culture.col-xs-12.col-sm-4.col-md-3
+                .tile-inner
+                    .picture(style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')")
+                    .caption
+                        .center
+                            h1 CARMICHAEL COLLETIVE
+                            p BUG MEMORIALS
+            .tile.post.category-work.col-xs-12.col-sm-4.col-md-3
+                .tile-inner
+                    .picture(style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')")
+                    .caption
+                        .center
+                            h1 SUBARU
+                            p BEST DAD
+            .tile.post.thought-leadership.category-about.col-xs-12.col-sm-4.col-md-3
+                .tile-inner
+                    .picture(style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')")
+                    .caption
+                        .center
+                            h1 HUFFINGTON POST
+                            p HERE'S TO LONGER GOODBYES
+                    .author
+                        span By Mike Lescarbeau
+            .tile.post.category-news.col-xs-12.col-sm-4.col-md-3
+                .tile-inner
+                    .picture(style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')")
+                    .caption
+                        .center
+                            h1 NEWS
+                            p Carmichael Lynch Named One of the Star Tribune’s Top Workplaces
+
+block scripts
+    script.
+        $(document).ready(function () {
+            var container = $(".tiles-container")[0];
+            var tiles = $(".tile");
+            var over = function (e) {
+                tiles.css('z-index', 100);
+                $(e.target).closest('.tile').css('z-index', 200);
+            };
+        });

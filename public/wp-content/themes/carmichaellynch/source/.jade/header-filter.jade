@@ -1,0 +1,45 @@
+extends _layout
+block content
+    #blog
+        header
+            #menu.header-button
+                span.horizontal-line
+                span.horizontal-line
+                span.horizontal-line
+            #filter.header-button.flip-button
+                span.flip-content
+
+            #logo.header-button.flip-button
+                span.flip-content
+
+        #filter-menu
+            #close-filter.close.header-button
+                .rotate-content
+            ul
+                li.filter-item
+                    span VIEW ALL
+                li.filter-item.category-agency-news
+                    span AGENCY NEWS
+                li.filter-item.category-work
+                    span NEW WORK
+                li.filter-item.category-about
+                    span OUR THINKING
+
+        nav.overlay
+            #close-nav.close.header-button
+                .rotate-content
+            ul.nav-list
+                li#nav-work.nav-item
+                    a(href="#") WORK
+                li#nav-about.nav-item
+                    a(href="#") ABOUT
+                li#nav-culture.nav-item
+                    a(href="#") CULTURE
+                li#nav-news.nav-item
+                    a(href="#") NEWS
+                li#nav-careers.nav-item
+                    a(href="#") CAREERS
+                li#nav-contact.nav-item
+                    a(href="#") CONTACT
+
+

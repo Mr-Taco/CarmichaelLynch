@@ -1,0 +1,36 @@
+$font-path: "fonts/";
+$fa-font-path:$font-path + "/font-awesome/";
+$icon-font-path: $font-path + "/bootstrap/";
+
+$grid-gutter-width:0px;
+$screen-lg: 1280px;
+$screen-lg-min: $screen-lg;
+
+
+$color-gray: #252525;
+$color-yellow: #dcd548;
+$color-brown: #998675;
+$color-blue: #5cc1d9;
+$color-aqua: #4bc49b;
+$color-red: #cc3828;
+$color-pink: #dfb2ad;
+
+
+$padding-xs:25px;
+$padding-sm:80px;
+$padding-md:80px;
+$padding-lg:80px;
+
+
+$marquee-height-sm:562px;
+$portrait-height-sm:375px;
+$landscape-height-sm:450px;
+
+$marquee-height-md:$marquee-height-sm;
+$portrait-height-md:550px;
+$landscape-height-md:$landscape-height-sm;
+
+
+$marquee-height-lg:814px;
+$portrait-height-lg:850px;
+$landscape-height-lg:790px;

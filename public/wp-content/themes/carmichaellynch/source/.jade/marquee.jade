@@ -1,0 +1,81 @@
+extends _layout
+
+block content
+    #work
+        .container-fluid
+            .row
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    #news-marquee.gallery-container.swiper-container.type-marquee(data-autoplay="0" data-peek="1" data-directions="1" data-strap="" data-info="" data-viewall="")
+                        .gallery.swiper-wrapper
+                            .gallery-item.category-news.swiper-slide(data-category="category-news")
+                                .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/dotgrid.png'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')")
+                                .marquee
+                                    .center
+                                        .date November 17, 2014
+                                        .copy
+                                            h1 NEWS
+                                            p Carmichael Lynch and Subaru Win Media Plan of the Year Award
+                                            .button.category-news
+                                                span SEE MORE <i class="fa fa-chevron-right"></i>
+                            .gallery-item.category-work.swiper-slide(data-category="category-work")
+                                .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/dotgrid.png'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')")
+                                .marquee
+                                    .center
+                                        .date November 17, 2014
+                                        .copy
+                                            h1 JACK LINK'S
+                                            p HUNGRY MOMENTS
+                                            .button.category-work
+                                                span VIEW PROJECT <i class="fa fa-chevron-right"></i>
+                            .gallery-item.category-about.swiper-slide(data-category="category-about")
+                                .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/dotgrid.png'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')")
+                                .marquee
+                                    .center
+                                        .date November 17, 2014
+                                        .copy
+                                            h1 NEWS
+                                            p Subaru Be Smashin Through the sign son!
+                                            .button.category-about
+                                                span SEE MORE <i class="fa fa-chevron-right"></i>
+                            .gallery-item.category-culture.swiper-slide(data-category="category-culture")
+                                .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/dotgrid.png'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')")
+                                .marquee
+                                    .center
+                                        .date November 17, 2014
+                                        .copy
+                                            h1 JACK LINK'S
+                                            p DUDE'S GOT A COUGAR IN HIS BELLY! WTF?!
+                                            .button.category-culture
+                                                span VIEW PROJECT <i class="fa fa-chevron-right"></i>
+
+                        .gallery-info-strap
+                            span.info Hungry Moments
+                                span.time (00:30)
+
+                        .gallery-view-all
+
+                        .gallery-pagination
+                        .gallery-prev-next
+                            #next.direction.theme-bg-color
+                                .fa.fa-angle-right
+                                .blurb
+                                    span
+                            #prev.direction.theme-bg-color
+                                .fa.fa-angle-left
+                                .blurb
+                                    span
+
+                        .gallery-view-all-panel
+                            .close.header-button
+                            .row
+
+
+
+
+
+
+
+
+
+
+

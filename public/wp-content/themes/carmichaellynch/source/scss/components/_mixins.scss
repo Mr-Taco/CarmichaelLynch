@@ -1,0 +1,631 @@
+$color-gray: #252525;
+$color-yellow: #dcd548;
+$color-brown: #998675;
+$color-blue: #5cc1d9;
+$color-aqua: #4bc49b;
+$color-red: #cc3828;
+$color-pink: #dfb2ad;
+
+$colors:($color-yellow,$color-brown,$color-blue,$color-aqua,$color-pink);
+
+
+$length: length($colors);
+@include keyframes(rainbow) {
+    $i:0;
+    @each $color in $colors {
+        $percent:percentage($i/($length));
+        $i:$i + 1;
+
+        #{$percent} {
+            fill:$color;
+            color:$color;
+
+            border-color:$color;
+        }
+
+    }
+    100% {
+        fill:nth($colors,1);
+        color:nth($colors,1);
+        border-color:nth($colors,1);
+
+    }
+
+
+}
+
+
+
+@mixin detailPanelColHeight($size) {
+
+    @for $i from 1 through 12 {
+        $percent: $i/12;
+        .detail-panel-col-height-#{$size}-#{$i} {
+            height:percentage($percent)!important;
+        }
+    }
+
+}
+
+@mixin allDetailPanelColHeights() {
+    @include detailPanelColHeight(xs);
+    @media(min-width: $screen-sm) {
+        @include detailPanelColHeight(sm);
+    }
+    @media(min-width: $screen-md) {
+        @include detailPanelColHeight(md);
+    }
+    @media(min-width: $screen-lg) {
+        @include detailPanelColHeight(lg);
+    }
+}
+
+
+@mixin detailPanelPushDown($small) {
+
+
+    $height-lg: $small * 2;
+
+    top:$height-lg
+
+}
+
+@mixin detailTextPushDown($small) {
+    $height-lg: $small * 2;
+
+    top:-$height-lg
+}
+
+@mixin detailTextPushDownHeight($small) {
+    $height-lg: $small * 2;
+
+    height:$height-lg
+}
+
+@mixin detailPanelHeight($small, $large) {
+
+    /*
+    Made formula for heights (lg = sm * 2)
+    Created namespaced height classes
+
+    */
+
+    $height-sm: $small;
+    $height-md: $height-sm + ($height-sm/2);
+    $height-lg: $large;
+
+
+    // All have been switched to height: $height-sm so that all gallery/image tiles are same height for mobile
+
+    .detail-panel-height-sm {
+        > div {
+            height: auto;
+
+            .image-tile, .gallery-tile {
+                height: $height-sm;
+            }
+        }
+    }
+
+    .detail-panel-min-height-sm {
+        > div {
+            height: auto;
+
+            .image-tile, .gallery-tile {
+                min-height: $height-sm;
+            }
+        }
+    }
+
+    .detail-panel-height-md {
+        > div {
+            height: auto;
+
+            .image-tile, .gallery-tile {
+                height: $height-sm;
+            }
+        }
+    }
+
+    .detail-panel-min-height-md {
+        > div {
+            height: auto;
+
+            .image-tile, .gallery-tile {
+                min-height: $height-sm;
+            }
+        }
+    }
+
+    .detail-panel-height-lg {
+        > div {
+            height: auto;
+
+            .image-tile, .gallery-tile {
+                height: $height-sm;
+            }
+        }
+
+        &.single {
+            .image-tile, .gallery-tile {
+                height: 315px;
+            }
+        }
+    }
+
+    .detail-panel-min-height-lg {
+        > div {
+            height: auto;
+
+            .image-tile, .gallery-tile {
+                min-height: $height-sm;
+            }
+        }
+    }
+
+
+
+    @media(min-width:$screen-sm) {
+
+        .detail-panel-height-sm {
+            > div {
+                height: $height-sm;
+
+                .image-tile, .gallery-tile {
+                    height: 100%;
+                }
+            }
+        }
+
+        .detail-panel-min-height-sm {
+            > div {
+                min-height: $height-sm;
+
+                .image-tile, .gallery-tile {
+                    height: 100%;
+                }
+            }
+        }
+
+        .detail-panel-height-md {
+            > div {
+                height: $height-md;
+
+                .image-tile, .gallery-tile {
+                    height: 100%;
+                }
+            }
+        }
+
+        .detail-panel-min-height-md {
+            > div {
+                min-height: $height-md;
+
+                .image-tile, .gallery-tile {
+                    height: 100%;
+                }
+            }
+        }
+
+        .detail-panel-height-lg {
+            > div {
+                height: $height-lg;
+
+                .image-tile, .gallery-tile {
+                    height: 100%;
+                }
+            }
+
+            &.single {
+                > div {
+                    height: $height-lg;
+                }
+
+                .image-tile, .gallery-tile {
+                    height: 100%
+                }
+            }
+        }
+
+        .detail-panel-min-height-lg {
+            > div {
+                min-height: $height-lg;
+
+                .image-tile, .gallery-tile {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+
+}
+
+@mixin imageRegistration {
+
+    &.img-center {
+        background-position-y: center;
+        background-position-x: center;
+    }
+
+    &.img-top {
+        background-position-y: top;
+    }
+
+    &.img-bottom {
+        background-position-y: bottom;
+    }
+
+    &.img-left {
+        background-position-x: left;
+    }
+
+    &.img-right {
+        background-position-x: right;
+    }
+}
+
+@mixin imageFit {
+
+    &.img-cover {
+        background-size:cover;
+    }
+
+    &.img-contain {
+        background-size:contain;
+    }
+
+
+}
+
+@mixin overrideGridPadding($size, $outer, $inner) {
+
+    .col-#{$size}-11, .col-#{$size}-10, .col-#{$size}-9, .col-#{$size}-8, .col-#{$size}-7, .col-#{$size}-6, .col-#{$size}-5, .col-#{$size}-4, .col-#{$size}-3, .col-#{$size}-2, .col-#{$size}-1 {
+        padding-left:#{$inner}px;
+        padding-right:#{$inner}px;
+    }
+
+    .col-#{$size}-11:first-child, .col-#{$size}-10:first-child, .col-#{$size}-9:first-child, .col-#{$size}-8:first-child, .col-#{$size}-7:first-child, .col-#{$size}-6:first-child, .col-#{$size}-5:first-child, .col-#{$size}-4:first-child, .col-#{$size}-3:first-child, .col-#{$size}-2:first-child, .col-#{$size}-1:first-child {
+        padding-left: #{$outer}px;
+    }
+    
+    
+
+    .col-#{$size}-11:last-child, .col-#{$size}-10:last-child, .col-#{$size}-9:last-child, .col-#{$size}-8:last-child, .col-#{$size}-7:last-child, .col-#{$size}-6:last-child, .col-#{$size}-5:last-child, .col-#{$size}-4:last-child, .col-#{$size}-3:last-child, .col-#{$size}-2:last-child, .col-#{$size}-1:last-child {
+        padding-right: #{$outer}px;
+    }
+
+
+    .col-#{$size}-pull-11:last-child, .col-#{$size}-pull-10:last-child, .col-#{$size}-pull-9:last-child, .col-#{$size}-pull-8:last-child, .col-#{$size}-pull-7:last-child, .col-#{$size}-pull-6:last-child, .col-#{$size}-pull-5:last-child, .col-#{$size}-pull-4:last-child, .col-#{$size}-pull-3:last-child, .col-#{$size}-pull-2:last-child, .col-#{$size}-pull-1:last-child {
+        padding-left: #{$outer}px!important;
+        padding-right: #{$inner}px!important;
+    }
+    .col-#{$size}-push-11:first-child, .col-#{$size}-push-10:first-child, .col-#{$size}-push-9:first-child, .col-#{$size}-push-8:first-child, .col-#{$size}-push-7:first-child, .col-#{$size}-push-6:first-child, .col-#{$size}-push-5:first-child, .col-#{$size}-push-4:first-child, .col-#{$size}-push-3:first-child, .col-#{$size}-push-2:first-child, .col-#{$size}-push-1:first-child {
+        padding-right: #{$outer}px!important;
+        padding-left: #{$inner}px!important;
+    }
+
+}
+
+@mixin globalColors($color, $flip-color) {
+
+    h3 {
+//      color: $color;
+    }
+
+    &.theme-border-color {
+        border-color: $color;
+    }
+
+    &.theme-color {
+        color: $color;
+    }
+
+    &.theme-bg-color {
+        background-color: $color!important;
+    }
+
+    &.theme-border-color.flip-color {
+        border-color: $flip-color;
+    }
+
+    &.theme-color.flip-color {
+        color: $flip-color;
+    }
+
+    &.theme-bg-color.flip-color {
+        background-color: $flip-color;
+    }
+
+    #filter-menu {
+        .close {
+            background-color: $color;
+        }
+    }
+
+    &.filter-item {
+        &:hover, &.active-state {
+            span {
+                border-color: $color;
+                color: $color;
+            }
+
+        }
+    }
+
+    .hero-marquee-copy h2 {
+        color: $color;
+    }
+
+    .accordion-item h1 {
+        color: $color;
+    }
+
+    article {
+        .content {
+            a {
+                color: $color;
+
+                &.button{
+                  color: white;
+
+                  &:hover {
+                    color: black;
+                  }
+                }
+            }
+        }
+    }
+
+    .detail-header {
+        p {
+            color: $color;
+        }
+    }
+
+    .author {
+        span.title {
+            color: $color;
+        }
+    }
+
+    #header-next, #header-prev {
+        .flip-content {
+            background-color: $color;
+
+            &:before {
+                background-color: $flip-color;
+            }
+        }
+    }
+
+    &.tile {
+        p {
+            color: $color;
+        }
+        .tile-inner {
+            &:hover {
+                border-color: $color;
+            }
+        }
+
+    }
+
+    &.nav-item {
+        a:hover, a.selected {
+            color: $color;
+        }
+    }
+
+
+    .gallery-item {
+        .marquee p {
+            color: $color;
+        }
+    }
+    &.gallery-item {
+        .marquee p {
+            color: $color!important;
+        }
+    }
+
+    &.gallery-thumb {
+        .thumb-image {
+            &:hover, &.selected {
+                border-color: $color;
+            }
+        }
+
+        .thumb-info {
+            span:first-child {
+                color: $color;
+            }
+
+        }
+
+    }
+
+    .direction {
+        background-color: $color;
+
+    }
+
+    &.direction {
+        background: $color;
+    }
+    .blurb span {
+        color: $color;
+    }
+
+    #filter {
+        .flip-content {
+            background-color: $color;
+        }
+
+        &:hover {
+            .flip-content:before {
+                background-color: $flip-color;
+            }
+        }
+    }
+
+    #prev-page, #next-page {
+        background-color: $color!important;
+
+    }
+
+    @media (min-width:$screen-sm) {
+        &#prev-page, &#next-page {
+            background-color: $color!important;
+            .blurb {
+                h2 {
+                    color: $color;
+                }
+            }
+        }
+    }
+
+
+
+    //    PHILS STARTS HERE
+
+    span.divider {
+        background-color: white;
+
+        &.colored {
+            background-color: $color;
+        }
+    }
+
+    .text-tile {
+        h1 {
+            color: $color;
+        }
+    }
+
+    .color-txt {
+        color: $color;
+    }
+
+    .white {
+      color: white !important;
+    }
+
+    .color-bg {
+        background-color: $color;
+    }
+
+    .craftList-wrapper {
+        p.headline, ul li p {
+            color: $color;
+        }
+    }
+
+    &.button {
+        @media(min-width: 768px) {
+            &::after {
+                background-color: $color;
+            }
+
+            &:hover {
+                border: 2px solid $color;
+            }
+        }
+    }
+
+
+    .button {
+      &::after {
+        background-color: $color;
+      }
+
+      &:hover {
+        border: 2px solid $color;
+      }
+    }
+
+
+    #our-craft {
+        background: black;
+
+        p,h2 {
+            &.header {
+                color: $color;
+            }
+        }
+
+    }
+
+    p.header {
+      color: $color;
+
+      &.white {
+        color: white;
+      }
+    }
+
+
+    #author {
+      .name {
+        p.name em {
+          color: $color;
+        }
+      }
+    }
+
+    // ==================================================
+    // Styles for Links List used on About + Careers Page
+    // ==================================================
+
+    ul.linksList {
+        li.link-item {
+            p.link-item-title {
+                color: $color;
+            }
+
+            h2 {
+              color: $color;
+            }
+
+            .content {
+                color: $color;
+
+                h2 {
+                  color: white;
+                }
+
+                p {
+                  color: $color;
+
+                  &.section {
+                    color: white;
+                  }
+                }
+
+                p.content, p.body {
+                  color: $color;
+                }
+
+                .button {
+                  &::after {
+                    background-color: $color;
+                  }
+
+                  &:hover {
+                    color: black;
+                    border: 2px solid $color;
+                  }
+                }
+            }
+        }
+    }
+
+    ul.linksList-desktop {
+        li {
+            color: $color;
+        }
+    }
+
+}
+
+

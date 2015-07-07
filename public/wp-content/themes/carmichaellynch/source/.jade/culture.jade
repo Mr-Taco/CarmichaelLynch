@@ -1,0 +1,52 @@
+extends _layout
+
+include _mixins
+block content
+
+    #culture
+
+        #hero.container-fluid
+            +heroPlayer('Culture', 'We give people & ideas the space to be great', 'about')
+
+
+        #our-craft.container-fluid
+            // -
+                TODO - Make the crafts section mixin.
+
+        .content.container-fluid
+
+            .tile-container.four-square
+                .row.col-xs-12.col-med-12
+                    .image-tile.large.col-xs-12.col-md-6.col-md-push-6(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/funny-or-die-img.jpg') center center no-repeat;")
+                    .text-tile.large.col-xs-12.col-md-6.col-md-pull-6
+                        .text-wrapper
+                            p.header Roofstage pass
+                            p.subheader We’re blessed with an amazing roof deck overlooking our gorgeous city. We’re equally blessed with industry hook ups to some of the best emerging acts in the country. Together, the Roofstage Pass concert series was born.
+                            button.button(href="#")
+                                span
+                                    +viewAllBtn()
+                                    p View Concerts
+            .tile-container.four-square
+                .row.col-xs-12.col-med-12
+                    .image-tile.large.col-xs-12.col-md-6(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/media-integration-bg.jpg') center center no-repeat;")
+                    .text-tile.large.col-xs-12.col-md-6
+                        .text-wrapper
+                            p.header Carmichael Collective
+                            p.subheader Carmichael Collective is an ongoing project that lets us play, experiment and celebrate creativity just for the sake of it.
+                            button.button(href="#")
+                                span
+                                    +viewAllBtn()
+                                    p View Projects
+
+            .tile-container.four-square
+                .row.col-xs-12.col-med-12
+                    .image-tile.large.col-xs-12.col-md-6.col-md-push-6(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/funny-or-die-img.jpg') center center no-repeat;")
+                    .text-tile.large.col-xs-12.col-md-6.col-md-pull-6
+                        .text-wrapper
+                            p.header Carmichael cares
+                            p.subheader Optio, dignissimos, quaerat. Sint provident hic aperiam minus aut, quod, quis libero ullam labore, modi, molestias voluptas? Eum quibusdam iste ipsa totam voluptatibus blanditiis perspiciatis sunt eligendi debitis, minima, suscipit.
+                            button.button(href="#")
+                                span
+                                    +viewAllBtn()
+                                    p See Programs
+

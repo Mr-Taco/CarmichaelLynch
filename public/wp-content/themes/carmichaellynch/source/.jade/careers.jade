@@ -1,0 +1,41 @@
+extends _layout
+include _mixins
+
+block content
+
+    #careers
+
+        #hero.container-fluid
+            +heroPlayer('Careers', 'You should want to work here because of this headline', 'careers')
+
+
+        #current-openings.row
+            .col-xs-12.col-sm-12.col-md-12
+                .desktop-tile.col-sm-6(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/careers-bg1.jpg') center center no-repeat; background-size: cover;")
+                .current-openings-text.col-xs-12.col-sm-6.col-md-6
+                    .text-wrapper
+                        p.header Always Looking For Talented People Who Are'nt Jerks.
+                        p.subheader Praesent sapien massa, convallis a pellente sque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit.
+                        button.button(href="#")
+                            span
+                                +viewAllBtn()
+                                p See Current Openings
+
+            .col-xs-12.col-sm-12.col-md-12
+                .left-wrapper.col-sm-6
+                    .content-wrapper
+                        p.header.colored Join the Carmichael Lynch Wolfpack
+                        p.subheader Carmichael Lynch has put out the call for 2015 summer interns, and we're looking to separate the wolves from the sheep. If you're wildly talented and ready to kick some tail, we look forward to hearing from you. It's a great opportunity to get a head start in our industry and stand out from the crowd. So if you want to show the world your fangs, apply to join our Wolfpack now.
+
+                        +linkListDesktopMenu(['Account Management', 'Market Strategy', 'Creative', 'Integrated Production', 'Consumer Engagement', 'Marketing Analytics'], 'Application deadline is March 13, 2015')
+
+                .right-wrapper.col-xs-12.col-sm-6(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/careers-bg2.jpg') center center no-repeat; background-size: cover;")
+                    .content-wrapper
+                        .text-wrapper
+                            p.header.colored Join the Carmichael Lynch Wolfpack
+                            p.subheader Carmichael Lynch has put out the call for 2015 summer interns, and we're looking to separate the wolves from the sheep. If you're wildly talented and ready to kick some tail, we look forward to hearing from you. It's a great opportunity to get a head start in our industry and stand out from the crowd. So if you want to show the world your fangs, apply to join our Wolfpack now.
+
+                        +linksList(['Account Management', 'Market Strategy', 'Creative', 'Integrated Production', 'Media Planning & Buying', 'Marketing Analytics'], 'Application deadline is March 13, 2015', 'careers')
+
+
+

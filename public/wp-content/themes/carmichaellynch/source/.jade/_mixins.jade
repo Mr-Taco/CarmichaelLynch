@@ -1,0 +1,199 @@
+//
+   Created by Pavel on 2/18/2015.
+
+
+mixin imageWidget(img, webm, mp4)
+    .image-tile(class!=attributes.class data-video-panel)
+        .image-tile-container(style="background-image: url('#{img}');" data-panel-image)
+        if mp4 !== false && webm !== false
+            .image-tile-container(data-panel-video)
+                +video('http://techslides.com/demos/sample-videos/small')('autoplay muted loop')
+
+
+
+mixin digitalScreen(device ,left, panelType)
+
+    .digital-screen.override-grid-padding.gradient
+        .row
+            +digitalScreenInfo('LIVING SASQUATCH TITLE HERE' , '<p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Curatbitur aliq uet quam id dui posuere blandit.</p><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat.</p>' , left)
+            +digitalScreenDevice(device,left ,panelType)
+
+
+mixin digitalScreenInfo(headline, body, push)
+    .col-xs-12.col-sm-5.col-md-4.col-lg-3(class= push ? "col-sm-push-7 col-md-push-8 col-lg-push-9" : "")
+        .digital-screen-info
+            .table
+                .table-center
+                    h3.headline!=headline
+                    !=body
+
+
+mixin digitalScreenDevice(type,pull)
+    - var classes = type;
+    .col-xs-12.col-sm-7.col-md-8.col-lg-9(class= pull ? "digital-screen-offset col-sm-pull-5 col-md-pull-4 col-lg-pull-3" : "")
+        .digital-screen-device-container.center(class!=classes)
+            .digital-screen-device-content-container
+                .digital-screen-device-content-container-wrapper
+                    +gallery()
+                    //+imageWidget('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/media-integration-bg.jpg','','')
+            .digital-screen-device-image
+
+
+
+mixin gallery()
+    #news-marquee.gallery-container.swiper-container(class!=attributes.class data-directions='1')
+        .gallery.swiper-wrapper
+            .gallery-item.category-news.swiper-slide
+                .image(style="background-image:url('images/temp/subaru.jpg')")
+
+            .gallery-item.category-work.swiper-slide
+                .image(style="background-image:url('images/temp/jackslinks.jpg')")
+
+            .gallery-item.category-news.swiper-slide
+                .image(style="background-image:url('images/temp/subarudog.jpg')")
+
+            .gallery-item.category-work.swiper-slide
+                .image(style="background-image:url('images/temp/trane.jpg')")
+
+
+        .gallery-info-strap
+            span.info
+                span.time
+
+        .gallery-view-all
+
+        .gallery-pagination
+        .gallery-prev-next
+            #next.direction
+                .fa.fa-angle-right
+                .blurb
+                    span
+            #prev.direction
+                .fa.fa-angle-left
+                .blurb
+                    span
+
+        .gallery-view-all-panel
+            .close.header-button
+            .row
+
+
+mixin video(path)
+    video&attributes(attributes)
+        source(src=path+'.webm', type='video/webm;codecs="vp8, vorbis"')
+        source(src=path+'.mp4', type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"')
+
+//-
+    For Various Interior Pages
+mixin heroPlayer(title, tagline, id)
+
+    .hero-video-container(id="hero-video-#{id}")
+
+        .hero-image
+            .desktop(style="background-image:url(images/temp/"+id+"-marquee.jpg)")
+            .mobile(style="background-image:url(images/temp/"+id+"-marquee-mobile.jpg)")
+
+        .hero-video
+            +video('videos/'+id)(preload="auto" loop autoplay)
+
+
+        .hero-marquee-copy
+            h1=title
+            h2=tagline
+
+
+mixin linksList(links, footer, page)
+    .linksList-wrapper(class=page)
+        ul.linksList
+            each arg,i in links
+                if i == 0
+                    li.link-item.active(id="link-item-" + arg)
+                        h2.link-item-title #{arg}
+                        .content
+                            if page == "about"
+                                ul
+                                    li Creating a Flawless Market Strategy
+                                        p We deliver insights that inspire cross-discipline agency teams to provide the most creative, innovative, engaging, and effetive marketing solutions. This team uncovers the culture, business, consumer, and brand insights to brief teams and deliver the recommended go-to-market strategy.
+                                    li Brand and Identity Planning
+                                    li Stakeholder Interviews
+                                    li Innovation Workshops
+                                    li Communications Planning
+                                    li Search Engine Marketing Stratgy (SEO & SEM)
+                                    li User Research
+                                    li Focus Groups and Surveys
+                                    li Customer Journey Development
+                                    li Competitive Audit
+                                    li Content Strategy
+                            else
+                                p.section Are you Hungry?
+                                p.body Consumer Engagement is looking for wolves with a sharp eye who can apply their critical thinking skills to both the art and science of media strategy. <br> <br> Starting on day one of your internship. you'll be raised by our experienced wolves, contributing to actual client projects. We'll give you an opportunity to uncover target insights and develop media plans — linked to brand objectives and business goals. You'll also see firsthand how contact plans can bring the organizing campaign idea to life in the real world. Great consumer engagement is a major part of great creative advertising!
+                                button(href="#" target="_blank" class="button category" +  page)
+                                    span Join The Pack <i class="fa fa-chevron-right"></i>
+                else
+                    li.link-item.inactive(id="link-item-" + arg)
+                        h2.link-item-title #{arg}
+                        .content
+                            if page == "about"
+                                ul
+                                    li Creating a Flawless Market Strategy
+                                        p We deliver insights that inspire cross-discipline agency teams to provide the most creative, innovative, engaging, and effetive marketing solutions. This team uncovers the culture, business, consumer, and brand insights to brief teams and deliver the recommended go-to-market strategy.
+                                    li Brand and Identity Planning
+                                    li Stakeholder Interviews
+                                    li Innovation Workshops
+                                    li Communications Planning
+                                    li Search Engine Marketing Stratgy (SEO & SEM)
+                                    li User Research
+                                    li Focus Groups and Surveys
+                                    li Customer Journey Development
+                                    li Competitive Audit
+                                    li Content Strategy
+                            else
+                                p.section Are you Hungry?
+                                p.body Consumer Engagement is looking for wolves with a sharp eye who can apply their critical thinking skills to both the art and science of media strategy. <br> <br> Starting on day one of your internship. you'll be raised by our experienced wolves, contributing to actual client projects. We'll give you an opportunity to uncover target insights and develop media plans — linked to brand objectives and business goals. You'll also see firsthand how contact plans can bring the organizing campaign idea to life in the real world. Great consumer engagement is a major part of great creative advertising!
+                                button(href="#" target="_blank" class="button category" +  page)
+                                    span Join The Pack <i class="fa fa-chevron-right"></i>
+
+
+        .list-footer
+            p #{footer}
+
+
+mixin linkListDesktopMenu(links, footer)
+    ul.linksList-desktop
+        each arg,i in links
+            if i == 0
+                li.link-item.active.inactive(data-index=i id="link-item-" + arg) #{arg}
+            else
+                li.link-item.inactive(data-index=i id="link-item-" + arg) #{arg}
+
+    .list-footer-desktop.col-xs-12
+        p #{footer}
+
+
+
+
+// -
+    For Work Home Page
+mixin item(arguments)
+    // when assigning top,left,right,bottom,center registration. center is always overridden.
+    // these need an id, making one up for test purposes
+
+    .accordion-item.category-work(id="#{arguments[3]}")
+        .accordion-content-image(style="background-image:url('#{arguments[2]}')" class!=attributes.class)
+        .table
+            .broken.table-center
+                h1 #{arguments[0]}
+                p #{arguments[1]}
+
+                .button.category-work
+                    span View Project
+
+
+mixin viewAllBtn()
+    .animate-view-all
+        span.square
+        span.square
+        span.square
+        span.square
+        span.square
+        span.square

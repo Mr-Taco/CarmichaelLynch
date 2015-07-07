@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carmichael Lynch - Static Front End</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="blog">
+      <header>
+        <div id="menu" class="header-button"><span class="horizontal-line"></span><span class="horizontal-line"></span><span class="horizontal-line"></span></div>
+        <div id="filter" class="header-button flip-button"><span class="flip-content"></span></div>
+        <div id="logo" class="header-button flip-button"><span class="flip-content"></span></div>
+      </header>
+      <div id="filter-menu">
+        <div id="close-filter" class="close header-button">
+          <div class="rotate-content"></div>
+        </div>
+        <ul>
+          <li class="filter-item"><span>VIEW ALL</span></li>
+          <li class="filter-item category-agency-news"><span>AGENCY NEWS</span></li>
+          <li class="filter-item category-work"><span>NEW WORK</span></li>
+          <li class="filter-item category-about"><span>OUR THINKING</span></li>
+        </ul>
+      </div>
+      <nav class="overlay">
+        <div id="close-nav" class="close header-button">
+          <div class="rotate-content"></div>
+        </div>
+        <ul class="nav-list">
+          <li id="nav-work" class="nav-item"><a href="#">WORK</a></li>
+          <li id="nav-about" class="nav-item"><a href="#">ABOUT</a></li>
+          <li id="nav-culture" class="nav-item"><a href="#">CULTURE</a></li>
+          <li id="nav-news" class="nav-item"><a href="#">NEWS</a></li>
+          <li id="nav-careers" class="nav-item"><a href="#">CAREERS</a></li>
+          <li id="nav-contact" class="nav-item"><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script src="vendor.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

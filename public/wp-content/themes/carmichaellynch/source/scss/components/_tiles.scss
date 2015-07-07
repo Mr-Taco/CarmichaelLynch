@@ -1,0 +1,347 @@
+[data-tiles] {
+    display:none;
+}
+
+.tiles-container {
+    &.category-career-openings, &.category-about-person, &.category-culture {
+        padding: 55px 0 0 0;
+    }
+}
+
+
+.tile-inner {
+    height:100%;
+}
+.tile.invert-xs {
+    background:$color-gray;
+}
+
+
+.tile {
+    position:relative;
+    height:110px;
+    background:black;
+    border-bottom:1px solid $color-gray;
+    display:block;
+
+
+
+    &:nth-child(2n+1) {
+        .picture {
+            float:left;
+            margin-right: 20px;
+            margin-left: 0;
+        }
+
+    }
+
+    .picture {
+        background-position:center;
+        background-size:cover;
+        background-repeat:no-repeat;
+        height:109px;
+        width:110px;
+        float:right;
+        margin-left: 20px;
+    }
+
+    .caption {
+        height:100%;
+        padding:0 25px;
+        overflow:hidden;
+
+
+        h1,p{
+            display:inline;
+            padding:0!important;
+        }
+        h1 {
+            color:white;
+        }
+    }
+
+    .author {
+        display:none;
+    }
+
+
+    h1 , p{
+        text-transform:uppercase;
+        font-family:league_gothicregular;
+        font-size:21px !important;
+        line-height:18px !important;
+    }
+
+
+}
+
+@media (max-width:$screen-xs-max) {
+    .tile:first-child {
+        height:111px;
+        border-top:1px solid $color-gray;
+    }
+}
+
+
+.tile.type-career-opening .picture {
+    background-image:url('images/icons/cl-pink-logo.jpg') !important;
+}
+
+
+.tile.has-author  ,.tile.career-opening , .tile.type-person {
+
+    .picture {
+        width:65px;
+        height:65px;
+        border-radius:130px;
+        margin:22px;
+
+
+        top:auto!important;
+        bottom:25px;
+        right:25px;
+        z-index:450;
+
+    }
+
+    .caption{
+        padding:0px 25px;
+    }
+
+}
+
+
+
+
+@media(min-width:$screen-sm) {
+
+    .tile.invert-sm {
+
+        .tile-transition-overlay {
+            background:#000000;
+        }
+
+        .tile-inner {
+            background:$color-gray;
+            border-color:black;
+        }
+
+        .caption {
+            background:$color-gray;
+
+        }
+    }
+
+    .tiles-container {
+        padding:80px 0;
+
+        &.category-career-openings, &.category-about-person, &.category-culture {
+            padding:75px 0;
+        }
+    }
+
+    .tile-inner {
+
+        position:relative;
+        margin:0 6px;
+        background:black;
+        border-style:solid;
+        border-width:3px;
+        border-color:$color-gray;
+
+        @include transition( border-color .5s , transform .5s , box-shadow .5s);
+        transform-origin:50% 50%;
+        @include transform(perspective(1000px));
+        @include box-shadow(0px 0px 0px 0px rgba(0,0,0,0));
+
+        &:hover {
+            @include transform(perspective(1000px) translateZ(20px));
+            @include box-shadow(0px 0px 25px 0px rgba(0,0,0,.75));
+        }
+
+    }
+
+    .tile-transition-overlay {
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:$color-gray;
+        border-style:solid;
+        border-width:3px;
+        border-color:transparent;
+        margin:0 6px;
+    }
+
+
+
+    .tile.has-author  ,.tile.career-opening , .tile.type-person {
+
+
+        .caption {
+            top:0!important;
+        }
+
+        .picture {
+            width:42%;
+            padding-bottom:42%;
+            margin:0;
+            right:25px;
+            left:auto;
+            float:none!important;
+        }
+
+        .author {
+            display:block;
+            position: absolute;
+            left: 25px;
+            bottom: 25px;
+            width: 33%;
+            font-size:14px;
+        }
+
+    }
+
+    .tile {
+
+        @include transition(width .5s ease-in-out, height .5s ease-in-out);
+
+        height:305px;
+
+
+
+        &:nth-child(3n) {
+            .tile-inner , .tile-transition-overlay {
+                margin-right:0;
+            }
+        }
+
+        &:nth-child(3n+1) {
+            .tile-inner  , .tile-transition-overlay{
+                margin-left:0;
+            }
+        }
+
+        &:first-child {
+            border-top:none;
+        }
+
+
+
+        margin-bottom:10px;
+        float:left;
+
+        position:relative;
+        background:transparent;
+        box-sizing:border-box;
+        border-bottom:none;
+
+
+        .caption {
+            h1 , p{
+                display:block;
+                font-size:22px !important;
+                line-height:20px !important;
+                padding:0;
+            }
+            p {
+//                width:80%;
+            }
+
+            .center {
+                top:auto!important;
+//                transform:none!important;
+                @include transform(none);
+
+            }
+
+
+            position:absolute;
+            padding:25px 12.5px 25px 25px!important;
+            height:48%;
+            box-sizing:border-box;
+            background:#000000;
+            top:52%;
+            width:100%;
+
+
+        }
+        .picture {
+            position:absolute;
+            width:100%;
+            height:52%;
+            background-size:cover;
+            right:0;
+            left:0;
+            margin-left: 0;
+        }
+
+        .author {
+            display:none;
+        }
+
+        &:nth-child(2n+1) {
+            .caption {
+                top:0px;
+            }
+            .picture {
+                top:48%;
+            }
+        }
+    }
+
+}
+
+@media(min-width:$screen-md) {
+    .tile {
+        height:305px;
+        .caption {
+            h1 , p{
+                font-size:24px !important;
+                line-height:22px !important;
+            }
+        }
+
+        &:nth-child(3n) {
+            .tile-inner , .tile-transition-overlay {
+                margin-right:6px;
+            }
+        }
+
+        &:nth-child(3n+1) {
+            .tile-inner  , .tile-transition-overlay{
+                margin-left:6px;
+            }
+        }
+
+
+        &:nth-child(4n) {
+            .tile-inner , .tile-transition-overlay {
+                margin-right:0;
+            }
+        }
+
+        &:nth-child(4n+1) {
+            .tile-inner , .tile-transition-overlay  {
+                margin-left:0;
+            }
+        }
+
+    }
+
+
+}
+
+@media(min-width:$screen-lg) {
+    .tile {
+        height:400px;
+        .caption {
+            h1 , p{
+                font-size:32px !important;
+                line-height:29px !important;
+            }
+        }
+    }
+}
+

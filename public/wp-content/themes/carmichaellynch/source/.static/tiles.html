@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carmichael Lynch - Static Front End</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .row {
+          max-width: 1280px;
+          margin: 20px auto;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="tile post thought-leadership category-about col-xs-12 col-sm-4 col-md-3">
+          <div class="tile-inner">
+            <div style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')" class="picture"></div>
+            <div class="caption">
+              <div class="center">
+                <h1>ad age</h1>
+                <p>LEARNINGS FROM BOOM IN ONLINE CLASSES</p>
+              </div>
+            </div>
+            <div class="author"><span>by Marcus Fischer</span></div>
+          </div>
+        </div>
+        <div class="tile post category-news col-xs-12 col-sm-4 col-md-3">
+          <div class="tile-inner">
+            <div style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')" class="picture"></div>
+            <div class="caption">
+              <div class="center">
+                <h1>NEWS</h1>
+                <p>Carmichael Lynch partners with Jack Link’s on Big Ten Network Spots</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile post category-culture col-xs-12 col-sm-4 col-md-3">
+          <div class="tile-inner">
+            <div style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')" class="picture"></div>
+            <div class="caption">
+              <div class="center">
+                <h1>ROOFSTAGE PASS</h1>
+                <p>FRANKIE LEE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile post category-work col-xs-12 col-sm-4 col-md-3">
+          <div class="tile-inner">
+            <div style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')" class="picture"></div>
+            <div class="caption">
+              <div class="center">
+                <h1>subaru</h1>
+                <p>A LIFE OF SAFETY</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile post category-culture col-xs-12 col-sm-4 col-md-3">
+          <div class="tile-inner">
+            <div style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')" class="picture"></div>
+            <div class="caption">
+              <div class="center">
+                <h1>CARMICHAEL COLLETIVE</h1>
+                <p>BUG MEMORIALS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile post category-work col-xs-12 col-sm-4 col-md-3">
+          <div class="tile-inner">
+            <div style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')" class="picture"></div>
+            <div class="caption">
+              <div class="center">
+                <h1>SUBARU</h1>
+                <p>BEST DAD</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile post thought-leadership category-about col-xs-12 col-sm-4 col-md-3">
+          <div class="tile-inner">
+            <div style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')" class="picture"></div>
+            <div class="caption">
+              <div class="center">
+                <h1>HUFFINGTON POST</h1>
+                <p>HERE'S TO LONGER GOODBYES</p>
+              </div>
+            </div>
+            <div class="author"><span>By Mike Lescarbeau</span></div>
+          </div>
+        </div>
+        <div class="tile post category-news col-xs-12 col-sm-4 col-md-3">
+          <div class="tile-inner">
+            <div style="background-image:url('http://dev.wildlife.la/cl/assets/jacks.jpg')" class="picture"></div>
+            <div class="caption">
+              <div class="center">
+                <h1>NEWS</h1>
+                <p>Carmichael Lynch Named One of the Star Tribune’s Top Workplaces</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="vendor.js"></script>
+    <script src="app.js"></script>
+    <script>
+      $(document).ready(function () {
+          var container = $(".tiles-container")[0];
+          var tiles = $(".tile");
+          var over = function (e) {
+              tiles.css('z-index', 100);
+              $(e.target).closest('.tile').css('z-index', 200);
+          };
+      });
+    </script>
+  </body>
+</html>

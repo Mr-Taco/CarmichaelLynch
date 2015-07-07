@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "0.1",
+  "dependencies": {
+    "jquery": "2.*",
+    "modernizr": "*",
+    "html5shiv": "*",
+    "bootstrap-sass-official": "*",
+    "packery": "~1.3.2",
+    "gsap": "~1.15.1",
+    "font-awesome": "~4.3.0",
+    "swiper": "~2.7.5",
+    "froogaloop": "~0.1.0",
+    "hammerjs": "~2.0.4",
+    "page": "visionmedia/page.js#~1.6.1",
+    "URIjs": "~1.14.2"
+  },
+  "devDependencies": {}
+}

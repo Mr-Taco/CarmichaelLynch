@@ -1,0 +1,470 @@
+
+
+
+
+
+
+
+
+.divider {
+    margin: 25px 0;
+}
+
+.gallery-tile {
+    height: 100%;
+    .gallery-pagination {
+        bottom: 20px !important;
+    }
+}
+
+.image-tile {
+    height: 100%;
+    position: relative;
+
+}
+
+.text-overlap {
+    background:black;
+
+}
+
+.image-tile-container {
+    @include imageRegistration();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+    }
+
+}
+
+.single-work {
+
+    .fixed-header {
+        .marquee {
+            .image-tile {
+                height: 315px;
+            }
+        }
+    }
+
+    .text-tile {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        /*top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;*/
+
+        &.centered {
+            text-align: center;
+        }
+
+        &.stats {
+            text-align: left;
+        }
+
+        h1.marquee, h2.marquee {
+            font-family: league_gothicregular;
+            font-size: 42px !important;
+            line-height:40px !important;
+            text-transform: uppercase;
+
+//            @media(min-width: $screen-md-min) {
+//                font-size: 92px !important;
+//                line-height: 78px !important;
+//                letter-spacing: 0.005em;
+//            }
+        }
+    }
+}
+
+.detail-panel-container {
+
+    @media(max-width: $screen-xs-max) {
+        &.marquee {
+            .row {
+                height: auto;
+                min-height: 450px;
+
+                > div {
+                    float: none;
+
+                    .image-tile {
+                        height: 450px;
+                    }
+                }
+
+                .text-overlap {
+                    height: auto !important;
+                }
+            }
+        }
+
+        .text-overlap.stats {
+            height: auto !important;
+            padding: 30px 0;
+        }
+    }
+
+
+    .row {
+        > div {
+            //            height:100%;
+        }
+        .text-tile {
+            padding: 30px;
+
+            &.marquee, &.stats {
+                padding: 30px;
+                height: auto;
+            }
+
+            p {
+                font-family: roboto;
+                font-weight: lighter;
+                font-size: 15px;
+                line-height: 19px;
+            }
+
+            @media(min-width: $screen-sm) {
+                padding: 0 80px;
+
+                &.marquee, &.stats {
+                    height: 100%;
+                }
+
+                &.marquee {
+                    padding: 140px 80px 0;
+                }
+
+                &.stats {
+                    padding: 80px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+
+            @media(min-width: $screen-md) {
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+.stats {
+    text-align: left;
+
+    ul {
+        padding-top: 20px;
+
+        li {
+            font-family: league_gothicregular;
+            font-size: 31px;
+            line-height: 27px;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+            max-width: 250px;
+        }
+    }
+
+    span.divider {
+        margin: 30px 0;
+    }
+
+    p {
+        font-family: roboto;
+        font-weight: lighter;
+        font-size: 16px;
+        line-height: 24px;
+
+    }
+}
+
+.push-text-marquee {
+    background:black;
+    padding: 30px;
+
+}
+
+.marquee-copy-wrapper {
+    p {
+
+        font-weight: lighter;
+        font-size: 15px;
+        line-height: 19px;
+    }
+}
+
+@include detailPanelHeight(315px,630px);
+
+
+@media (max-width:$screen-xs-max) {
+    .text-overlap{
+        .marquee {
+            p , h2 {
+                span {
+                    color:white!important;
+                }
+            }
+        }
+    }
+
+
+    .stats {
+        p > span {
+            color:white!important;
+        }
+    }
+
+
+
+//    .detail-panel-height-lg.single {
+//        >div {
+//            height:225px;
+//        }
+//    }
+
+
+}
+
+
+
+
+@media(min-width:$screen-xs) {
+    @include detailPanelHeight(315px,630px);
+
+}
+
+@media (max-width:$screen-xs-max) {
+
+//    .detail-panel-height-lg.single {
+//        > div {
+//            height:315px;
+//        }
+//    }
+}
+
+
+@media(min-width: $screen-sm) {
+
+    .stats.dark {
+        > h2 , > h3 {
+            color:black;
+        }
+    }
+
+
+    .single-work {
+        .fixed-header {
+            .marquee {
+                .image-tile {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .detail-push-down {
+        @include detailPanelPushDown(380px);
+        position:relative;
+        z-index: 10;
+    }
+
+    .push-text-marquee {
+        padding:140px 80px 80px;
+        position:absolute;
+        background:transparent;
+        @include detailTextPushDown(380px);
+        @include detailTextPushDownHeight(380px);
+    }
+
+    .marquee-copy-wrapper {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        padding-bottom: 80px;
+        padding-left: 80px;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+        background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+        background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+        background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+
+
+        .divider {
+            margin: 30px 0 0;
+        }
+
+        p {
+            width: 65%;
+            line-height:26px;
+            font-size: 18px;
+            padding-top: 25px;
+        }
+    }
+
+    .single-work {
+        .text-tile {
+            position: absolute;
+
+
+            h1.marquee, h2.marquee {
+                font-family: league_gothicregular;
+                font-size: 72px !important;
+                line-height: 60px !important;
+            }
+
+
+        }
+
+        h3 {
+            font-size: 48px;
+            line-height: 43px;
+        }
+    }
+
+    .text-overlap {
+        position: absolute;
+        top: 0px;
+        background:transparent!important;
+
+        div.marquee {
+            height: 100%;
+            padding: 80px 0 0 80px;
+
+
+        }
+    }
+
+
+
+
+
+
+
+    .stats {
+        padding: 0px;
+
+        ul {
+
+            li {
+                color: black;
+                font-family: league_gothicregular;
+                font-size: 48px;
+                font-weight: regular;
+                padding-bottom: 40px;
+                text-transform: uppercase;
+                max-width: none;
+            }
+        }
+
+        span.divider {
+            margin: 40px 0;
+        }
+
+        p {
+            display: block;
+            color: black;
+            font-family: roboto;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            max-width: 50%;
+        }
+
+        h3 {
+            max-width: 50%;
+        }
+    }
+
+
+    .text-tile.stats {
+        span {
+            font-size: 16px !important;
+            line-height: 24px !important;
+        }
+    }
+
+	@include detailPanelHeight(280px,560px);
+}
+
+
+@media(min-width: $screen-sm) and ( max-width: $screen-sm-max) {
+    .detail-panel-height-lg.single {
+        > div {
+            height:432px;
+        }
+    }
+}
+
+
+@media(min-width: $screen-md) {
+
+    @include detailPanelHeight(380px,760px);
+
+
+    .detail-push-down {
+        @include detailPanelPushDown(450px)
+    }
+}
+
+@media(min-width: $screen-md) and ( max-width: $screen-md-max) {
+    .detail-panel-height-lg.single {
+        > div {
+            height:576px;
+        }
+    }
+}
+
+
+@media(min-width: $screen-lg) {
+
+    @include detailPanelHeight(486px,972px);
+
+    .single-work {
+        .text-tile {
+            h1.marquee, h2.marquee {
+                font-family: league_gothicregular;
+                font-size: 92px !important;
+                line-height: 80px !important;
+            }
+        }
+    }
+
+    div.text-overlap {
+        //height: 900px!important;;
+
+        div.marquee {
+            .marquee-copy-wrapper {
+                p {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@include allDetailPanelColHeights();
+
+

@@ -1,0 +1,76 @@
+//For some reason the sass compiler compiles all files without a _.
+
+#culture {
+
+    .image-tile {
+        height: 392px;
+    }
+
+    .text-tile {
+        padding: 35px 25px;
+        background: black;
+
+        .text-wrapper {
+            padding: 0;
+        }
+    }
+
+    #carmichael-cares {
+        .content-wrapper {
+            p.subheader {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @media(min-width: $screen-sm) {
+        .image-tile, .text-tile {
+            height: 562px;
+        }
+
+        .image-tile-container {
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            opacity: .1;
+            transition: all .35s ease-in-out;
+
+            &.hovered, &:hover {
+                filter: grayscale(0%);
+                -webkit-filter: grayscale(0%);
+                opacity: 1;
+            }
+        }
+
+        .text-tile {
+            position: relative;
+            display: table;
+            padding: 35px 80px;
+
+            .text-wrapper {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    @media(min-width: $screen-md) {
+        .image-tile, .text-tile {
+            height: 562px;
+        }
+
+        .image-tile {
+            padding: 0;
+        }
+    }
+
+    @media(min-width: $screen-lg) {
+        .image-tile, .text-tile {
+            height: 814px;
+        }
+
+        .image-tile {
+            padding: 0;
+        }
+    }
+
+}

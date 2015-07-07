@@ -1,0 +1,79 @@
+/*
+Error: Undefined variable: "$screen-sm".
+        on line 17 of /Users/philbrady/Sites/Carmichael-Lynch/public/wp-content/themes/carmichaellynch/source/scss/culture.scss
+
+12: 
+13: 
+14: 
+15: 
+16: 
+17:   @media(min-width:$screen-sm) {
+18:     .image-tile, .text-tile {
+19:       height: 562px;
+20:     }
+21: 
+22:     .text-tile {
+
+Backtrace:
+/Users/philbrady/Sites/Carmichael-Lynch/public/wp-content/themes/carmichaellynch/source/scss/culture.scss:17
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:536:in `block in run_interp_no_strip'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:534:in `map'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:534:in `run_interp_no_strip'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:541:in `run_interp'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:509:in `visit_media'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/stack.rb:79:in `block in with_base'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/stack.rb:115:in `with_frame'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/stack.rb:79:in `with_base'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:430:in `map'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/stack.rb:79:in `block in with_base'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/stack.rb:115:in `with_frame'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/stack.rb:79:in `with_base'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/sass-3.4.12/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/compass-1.0.3/bin/compass:44:in `call'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/bin/compass:23:in `load'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/bin/compass:23:in `<main>'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/bin/ruby_executable_hooks:15:in `eval'
+/Users/philbrady/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$screen-sm\".\A         on line 17 of /Users/philbrady/Sites/Carmichael-Lynch/public/wp-content/themes/carmichaellynch/source/scss/culture.scss\A \A 12: \A 13: \A 14: \A 15: \A 16: \A 17:   @media(min-width:$screen-sm) {\A 18:     .image-tile, .text-tile {\A 19:       height: 562px;\A 20:     }\A 21: \A 22:     .text-tile {"; }

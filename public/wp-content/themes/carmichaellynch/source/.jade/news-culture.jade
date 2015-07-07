@@ -1,0 +1,73 @@
+extends _layout
+
+block content
+    .category-roofstage-pass
+        .container-fluid
+            .row
+                .col-xs-12.detail-header(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/gray-bg2.jpg')")
+                    .headlines
+                        h1 ROOFSTAGE PASS
+                        p FRANKIE LEE
+
+                    .publish-details
+                        span.author
+                        span.published  Published on
+                        span.date November 10, 2014
+
+
+            article
+                .row
+                    .content.col-xs-12.col-sm-6
+                        p Twin Cities alt country musician Frankie Lee has played with numerous artists. Now he’s stepping into the limelight with his debut EP Middle West. His honest lyrics and cowboy-coolness left us wanting to pack up and head for the country.
+                    .col-xs-12.col-sm-6
+                        .gallery-container.swiper-container.type-portrait
+                            .gallery.swiper-wrapper
+                                .gallery-item.category-news.swiper-slide
+                                    .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')")
+
+                                .gallery-item.category-work.swiper-slide
+                                    .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')")
+
+                                .gallery-item.category-news.swiper-slide
+                                    .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/subaru1.jpg')")
+
+                                .gallery-item.category-work.swiper-slide
+                                    .image(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/jacks1.jpg')")
+
+
+                            .gallery-info-strap
+                                span.info Hungry Moments
+                                    span.time (00:30)
+
+                            .gallery-view-all
+
+                            .gallery-pagination
+                            .gallery-prev-next
+                                #next.direction
+                                    .fa.fa-angle-right
+                                    .blurb
+                                        span
+                                #prev.direction
+                                    .fa.fa-angle-left
+                                    .blurb
+                                        span
+
+                            .gallery-view-all-panel
+                                .close.header-button
+                                .row
+
+
+
+
+block scripts
+    script.
+        $(document).ready(function () {
+            var gallery = new cl.Gallery(".gallery-container", {
+                peak: false
+                , directions: true
+                , autoplay: 7000
+                , strap: false
+                , info: false
+                , viewAll: false
+            });
+        });

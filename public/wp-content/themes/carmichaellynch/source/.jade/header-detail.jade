@@ -1,0 +1,44 @@
+extends _layout
+include _mixins
+
+block content
+    #work.detail
+        header
+            #menu.header-button
+                span.horizontal-line
+                span.horizontal-line
+                span.horizontal-line
+
+            #logo.header-button.flip-button
+                span.flip-content
+            #header-prev.header-button.break-right.flip-button
+                span.flip-content
+                    i.fa.fa-angle-left
+            #header-next.header-button.flip-button
+                span.flip-content
+                    i.fa.fa-angle-right
+
+            #header-view-all.header-button
+                +viewAllBtn()
+
+        nav.overlay
+            #close.header-button
+                .rotate-content
+            ul.nav-list
+                li#nav-work.nav-item
+                    a(href="#") WORK
+                li#nav-about.nav-item
+                    a(href="#") ABOUT
+                li#nav-culture.nav-item
+                    a(href="#") CULTURE
+                li#nav-news.nav-item
+                    a(href="#") NEWS
+                li#nav-careers.nav-item
+                    a(href="#") CAREERS
+                li#nav-contact.nav-item
+                    a(href="#") CONTACT
+
+
+
+
+

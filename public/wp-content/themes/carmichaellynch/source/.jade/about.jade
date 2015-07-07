@@ -1,0 +1,138 @@
+extends _layout
+include _mixins
+
+block content
+
+    #about
+
+        #hero.container-fluid
+            +heroPlayer('About', 'We make work that works', 'about')
+
+
+        #our-craft.row
+            .left-wrapper.col-sm-6
+                .content-wrapper
+                    p.header.colored Craft
+                    p.subheader Great stories are not told. They're felt. Lived. Shared. So how do we make that happen?
+
+                    +linkListDesktopMenu(['Account Management', 'Market Strategy', 'Creative', 'Integrated Production', 'Consumer Engagement', 'Marketing Analytics'], 'Aeternum Inspirata.')
+
+            .right-wrapper.col-xs-12.col-sm-6(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-craft-bg.jpg') center center no-repeat;background-size: cover;")
+                .content-wrapper
+                    .text-wrapper
+                        p.header.colored Craft
+                        p.subheader Great stories are not told. They're felt. Lived. Shared. So how do we make that happen?
+
+                    +linksList(['Account Management', 'Market Strategy', 'Creative', 'Integrated Production', 'Media Planning & Buying', 'Marketing Analytics'], 'Aeternum Inspirata', 'about')
+
+
+
+        #clients
+            .row
+                .col-xs-12.col-sm-6.col-sm-push-6
+                    .clients-text.col-xs-12.col-md-12
+                        .text-wrapper
+                            p.header Clients
+                            p.subheader Carmichael Lynch exists for a simple reason: to transform, instigate, rally and delight - all to put our clients not just top-of-mind, but deep in hearts.
+
+                    .clients-desktop-tile.col-xs-12.col-md-12(style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-clients-bg.jpg') center center no-repeat; background-size: cover;")
+
+
+                .col-xs-12.col-sm-6.col-sm-pull-6
+                    .clients-logos.col-xs-12.col-md-12
+                        ul.client-logo-list.col-xs-12
+                            li.col-xs-6
+                                a(href="#")
+                                    .client-logo-item(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-client-1.gif')")
+                            li.col-xs-6
+                                a(href="#")
+                                    .client-logo-item(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-client-2.gif')")
+                            li.col-xs-6
+                                a(href="#")
+                                    .client-logo-item(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-client-3.gif')")
+                            li.col-xs-6
+                                a(href="#")
+                                    .client-logo-item(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-client-4.gif')")
+                            li.col-xs-6
+                                a(href="#")
+                                    .client-logo-item(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-client-5.gif')")
+                            li.col-xs-6
+                                a(href="#")
+                                    .client-logo-item(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-client-6.gif')")
+                            li.col-xs-6
+                                a(href="#")
+                                    .client-logo-item(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-client-7.gif')")
+                            li.col-xs-6
+                                a(href="#")
+                                    .client-logo-item(style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/about-client-8.gif')")
+
+        #whoweare
+            .container.tiles-container
+
+                .row
+                    p.header.color-txt WHO WE ARE
+                    p.subheader Mauris blandit aliquet elit, eget tincidunt nibh pulvinar stibulum ac diam si elementum sed sit amet dui.
+
+                .row
+                    .tile.invert-sm.post.thought-leadership.category-people.col-xs-12.col-sm-4.col-md-3
+                        .tile-inner
+                            .picture(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-1.jpg')")
+                            .caption
+                                .center
+                                    h1 Marcus Fischer
+                                    p CMO
+                            .author
+                                span by Marcus Fischer
+                    .tile.invert-sm.post.thought-leadership.category-people.col-xs-12.col-sm-4.col-md-3
+                        .tile-inner
+                            .picture(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-2.jpg')")
+                            .caption
+                                .center
+                                    h1 Marcus Fischer
+                                    p CMO
+                    .tile.invert-sm.post.thought-leadership.category-people.col-xs-12.col-sm-4.col-md-3
+                        .tile-inner
+                            .picture(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-1.jpg')")
+                            .caption
+                                .center
+                                    h1 Marcus Fischer
+                                    p CMO
+                    .tile.invert-sm.post.thought-leadership.category-people.col-xs-12.col-sm-4.col-md-3
+                        .tile-inner
+                            .picture(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-2.jpg')")
+                            .caption
+                                .center
+                                    h1 Marcus Fischer
+                                    p CMO
+                    .tile.invert-sm.post.thought-leadership.category-people.col-xs-12.col-sm-4.col-md-3
+                        .tile-inner
+                            .picture(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-1.jpg')")
+                            .caption
+                                .center
+                                    h1 Marcus Fischer
+                                    p CMO
+                    .tile.invert-sm.post.thought-leadership.category-people.col-xs-12.col-sm-4.col-md-3
+                        .tile-inner
+                            .picture(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-2.jpg')")
+                            .caption
+                                .center
+                                    h1 Marcus Fischer
+                                    p CMO
+                    .tile.invert-sm.post.thought-leadership.category-people.col-xs-12.col-sm-4.col-md-3
+                        .tile-inner
+                            .picture(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-1.jpg')")
+                            .caption
+                                .center
+                                    h1 Marcus Fischer
+                                    p CMO
+                            .author
+                                span By Mike Lescarbeau
+                    .tile.invert-sm.post.thought-leadership.category-people.col-xs-12.col-sm-4.col-md-3
+                        .tile-inner
+                            .picture(style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/author-2.jpg')")
+                            .caption
+                                .center
+                                    h1 Marcus Fischer
+                                    p CMO
+
+

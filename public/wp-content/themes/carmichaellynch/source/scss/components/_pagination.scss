@@ -1,0 +1,133 @@
+#pagination {
+    padding-bottom: 30px;
+    background-color: black;
+    .row {
+        background: black;
+        padding: 0 25px;
+        > div, > a > div {
+            cursor: pointer;
+            height: 50px;
+            background-color: black;
+            > div {
+                display: none;
+            }
+
+            > i {
+                height: 50px;
+                line-height: 50px;
+                font-size: 25px;
+                text-align: center;
+                color: black;
+                display: block;
+            }
+        }
+    }
+}
+
+#view-all-pages {
+
+}
+
+@media (min-width: $screen-sm) {
+    #pagination {
+        padding-bottom: 0px;
+        background-color: transparent;
+
+        .row {
+            background: black;
+            border-top: 1px solid $color-gray;
+            padding: 0;
+            > div, > a > div {
+                height: 200px;
+                background-color: black !important;
+                color: white;
+                line-height: 200px;
+                font-size: 35px;
+                > i {
+                    height: 200px;
+                    line-height: 200px;
+                    text-align: center;
+                    color: white;
+                    @include transition( transform .15s ease-in-out);
+
+                }
+                > div {
+                    display: block;
+                    font-family: league_gothicregular;
+                    height: 100%;
+                    text-transform: uppercase;
+                    text-align: center;
+                    &.blurb {
+                        h1, h2 {
+                            font-size: 28px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+
+                $inner: 25px;
+                $outer: 0px;
+                &#next-page {
+                    .blurb {
+                        padding: 0 $outer 0 $inner;
+                    }
+
+                    &:hover {
+                      .fa-angle-right {
+                        @include transform( translateX(5px));
+                      }
+                    }
+
+                }
+                &#prev-page {
+                    .blurb {
+                        padding: 0 $inner 0 $outer;
+                    }
+
+                    &:hover {
+                      .fa-angle-left {
+                        @include transform( translateX(-5px));
+                      }
+                    }
+                }
+
+
+                .image-container {
+                    display:none;
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-md) {
+    #pagination .row > div, #pagination .row > a > div {
+        > div.blurb {
+            h1, h2 {
+                font-size: 32px;
+                line-height: 30px;
+            }
+        }
+        .image-container {
+            display:block;
+            overflow: hidden;
+
+            .image {
+              height: 100%;
+              background-size: cover;
+              background-position: center;
+              @include transition(transform .35s ease-in-out);
+            }
+        }
+    }
+
+    #prev-page:hover, #next-page:hover {
+      .image-container {
+        .image {
+          @include transform(scaleX(1.15) scaleY(1.15));
+        }
+      }
+    }
+
+}

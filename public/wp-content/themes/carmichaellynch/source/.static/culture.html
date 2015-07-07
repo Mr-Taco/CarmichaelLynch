@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carmichael Lynch - Static Front End</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="culture">
+      <div id="hero" class="container-fluid">
+        <div id="hero-video-about" class="hero-video-container">
+          <div class="hero-image">
+            <div style="background-image:url(images/temp/about-marquee.jpg)" class="desktop"></div>
+            <div style="background-image:url(images/temp/about-marquee-mobile.jpg)" class="mobile"></div>
+          </div>
+          <div class="hero-video">
+            <video preload="auto" loop="loop" autoplay="autoplay">
+              <source src="videos/about.webm" type="video/webm;codecs=&quot;vp8, vorbis&quot;"/>
+              <source src="videos/about.mp4" type="video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"/>
+            </video>
+          </div>
+          <div class="hero-marquee-copy">
+            <h1>Culture</h1>
+            <h2>We give people &amp; ideas the space to be great</h2>
+          </div>
+        </div>
+      </div>
+      <div id="our-craft" class="container-fluid">
+        <!-- -
+        TODO - Make the crafts section mixin.
+        
+        -->
+      </div>
+      <div class="content container-fluid">
+        <div class="tile-container four-square">
+          <div class="row col-xs-12 col-med-12">
+            <div style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/funny-or-die-img.jpg') center center no-repeat;" class="image-tile large col-xs-12 col-md-6 col-md-push-6"></div>
+            <div class="text-tile large col-xs-12 col-md-6 col-md-pull-6">
+              <div class="text-wrapper">
+                <p class="header">Roofstage pass</p>
+                <p class="subheader">We’re blessed with an amazing roof deck overlooking our gorgeous city. We’re equally blessed with industry hook ups to some of the best emerging acts in the country. Together, the Roofstage Pass concert series was born.</p>
+                <button href="#" class="button"><span>
+                    <div class="animate-view-all"><span class="square"></span><span class="square"></span><span class="square"></span><span class="square"></span><span class="square"></span><span class="square"></span></div>
+                    <p>View Concerts</p></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile-container four-square">
+          <div class="row col-xs-12 col-med-12">
+            <div style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/media-integration-bg.jpg') center center no-repeat;" class="image-tile large col-xs-12 col-md-6"></div>
+            <div class="text-tile large col-xs-12 col-md-6">
+              <div class="text-wrapper">
+                <p class="header">Carmichael Collective</p>
+                <p class="subheader">Carmichael Collective is an ongoing project that lets us play, experiment and celebrate creativity just for the sake of it.</p>
+                <button href="#" class="button"><span>
+                    <div class="animate-view-all"><span class="square"></span><span class="square"></span><span class="square"></span><span class="square"></span><span class="square"></span><span class="square"></span></div>
+                    <p>View Projects</p></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile-container four-square">
+          <div class="row col-xs-12 col-med-12">
+            <div style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/230054/funny-or-die-img.jpg') center center no-repeat;" class="image-tile large col-xs-12 col-md-6 col-md-push-6"></div>
+            <div class="text-tile large col-xs-12 col-md-6 col-md-pull-6">
+              <div class="text-wrapper">
+                <p class="header">Carmichael cares</p>
+                <p class="subheader">Optio, dignissimos, quaerat. Sint provident hic aperiam minus aut, quod, quis libero ullam labore, modi, molestias voluptas? Eum quibusdam iste ipsa totam voluptatibus blanditiis perspiciatis sunt eligendi debitis, minima, suscipit.</p>
+                <button href="#" class="button"><span>
+                    <div class="animate-view-all"><span class="square"></span><span class="square"></span><span class="square"></span><span class="square"></span><span class="square"></span><span class="square"></span></div>
+                    <p>See Programs</p></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="vendor.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

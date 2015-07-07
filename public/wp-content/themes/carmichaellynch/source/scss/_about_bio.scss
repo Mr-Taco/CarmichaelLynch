@@ -1,0 +1,139 @@
+#about-bio {
+
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+    #who {
+        padding-bottom: 30px;
+
+        p.header:first-child {
+            margin-bottom: 0;
+        }
+
+        .bio-face {
+            height: 350px;
+            margin: 105px 30px 0;
+            @include imageRegistration()
+        }
+
+        .text-wrapper:last-child {
+            padding: 15px 0;
+
+            p.read-more {
+                font-family: roboto;
+                font-weight: lighter;
+                font-size: 16px;
+                line-height: 24px;
+                width: 200px;
+            }
+
+            .button {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    #content {
+
+        p.header:first-child {
+            margin-bottom: 0;
+        }
+
+        article {
+            background: transparent;
+            padding: 20px 0 0;
+
+            p {
+                padding-bottom: 30px;
+                font-family: roboto;
+                font-weight: lighter;
+                font-size: 15px;
+                line-height: 21px;
+            }
+        }
+    }
+
+    @media(min-width: $screen-sm) {
+        #who {
+            .desktop {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .bio-face {
+                height: 350px;
+                margin: 205px 80px 0;
+            }
+
+            .text-wrapper {
+                h1, h2 {
+                    &.mobile {
+                        font-size: 62px;
+                        line-height: 56px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(min-width: $screen-md) {
+        //max-width: 1500px;
+        margin: 0 auto;
+
+        .mobile {
+            display: none !important;
+        }
+
+        .desktop {
+            display: block !important;
+        }
+
+        #who {
+            padding-right: 0;
+
+            .bio-face {
+                margin: 0;
+            }
+        }
+
+        #content {
+
+            .text-wrapper {
+                padding: 0;
+            }
+
+            article {
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    @media(min-width: $screen-md) {
+
+        #who {
+            //padding-right: 80px;
+
+            .bio-face {
+                height: 465px;
+            }
+
+            .text-wrapper:last-child {
+                p.read-more {
+                    font-family: roboto;
+                    font-weight: lighter;
+                    font-size: 16px;
+                    line-height: 24px;
+                    width: 285px;
+                }
+            }
+        }
+
+    }
+
+}

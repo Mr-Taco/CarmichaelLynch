@@ -1,0 +1,27 @@
+//variables and overrides
+@import "variables";
+
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+
+//compass
+@import "compass";
+
+//mixins
+@import "components/mixins";
+
+//fonts
+@import "fonts";
+
+
+//global styles
+@import "global";
+
+//components
+@import "components/footer", "components/galleries", "components/headerie", "components/tiles", "components/pagination", "components/linksList", "components/buttons";
+@import "components/digital_screen", "components/loading";
+
+//pages
+//@import "home_landing";
+@import "work_landing";
+@import "work_detail";
+@import "news_categories";
